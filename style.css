@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+body {
+  background: var(--stone-100);
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  color: var(--stone-600);
+}
+img {
+  width: 100%;
+}
+.container {
+  width: 700px;
+  margin: 70px auto;
+  padding: 30px;
+  background: var(--white);
+  border-radius: 15px;
+}
+.header-img {
+  border-radius: 5px;
+}
+h1,
+h2 {
+  font-size: 2.5rem;
+  padding: 25px 0;
+  font-family: "Young Serif", serif;
+  color: var(--stone-900);
+}
+h2 {
+  color: var(--brown-800);
+  font-size: 1.7rem;
+}
+h3 {
+  color: var(--rose-800);
+  padding-bottom: 20px;
+}
+p {
+  padding-bottom: 25px;
+}
+.preparation {
+  background-color: var(--rose-50);
+  padding: 25px;
+  border-radius: 5px;
+}
+.preparation ul {
+  padding-left: 20px;
+}
+.preparation ul li::marker {
+  color: var(--rose-800);
+}
+/* ingredients */
+.ingredients,
+.instructions {
+  border-bottom: 2px solid var(--stone-150);
+}
+.ingredients ul li,
+.instructions ol li,
+.preparation ul li {
+  padding-bottom: 20px;
+  padding-left: 15px;
+}
+.ingredients ul li:last-of-type,
+.instructions ol li:last-of-type {
+  padding-bottom: 25px;
+}
+.ingredients ul,
+.instructions ol {
+  padding-left: 25px;
+}
+/* Instruction */
+.instructions ol li {
+  line-height: 1.4;
+}
+.instructions ol li::marker,
+.nutrition .grid-container .grid-items:nth-of-type(even) {
+  color: var(--brown-800);
+  font-weight: bold;
+  font-family: "Outfit";
+}
+/* Nutriotion */
+
+.nutrition .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+.nutrition .grid-container .grid-items {
+  text-align: start;
+  padding: 15px 0 15px 20px;
+}
+.nutrition .grid-container .grid-items:nth-of-type(odd) {
+  padding-left: 30px;
+}
+.nutrition .grid-container .grid-items:nth-of-type(n + 3) {
+  border-top: 2px solid var(--stone-150);
+}
+@media (max-width: 768px) {
+  .container {
+    margin: 0;
+    padding: 30px;
+    overflow-x: hidden;
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+  .container .header-img {
+    border-radius: 0;
+  }
+  .container section,
+  .container header {
+    padding: 0;
+    margin: 0 30px;
+  }
+}
