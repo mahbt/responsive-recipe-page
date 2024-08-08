@@ -10,7 +10,7 @@
 # Screenshot
 
 ![](./assets/screenshots/Omelette%20Recipe.png)
-![](./assets/screenshots/Omelette%20Recipe2.png)
+
 
 # Links
 
